@@ -57,21 +57,21 @@
         <h2>Goals and Deliverables</h2>
         <p><strong>Plan to Achieve (Minimum Goals for a Successful Project):</strong></p>
         <ul>
-            <li><strong>Functional Implementation on GPU and CPU:</strong> Develop a fully functional implementation of sparse matrix multiplication on both GPU (using CUDA) and multi-core CPU (using OpenMP). Ensure that the code can handle matrices of different sizes and sparsity patterns efficiently without errors or major bottlenecks.</li>
-            <li><strong>Basic Performance Analysis:</strong> Perform a detailed analysis comparing the performance of GPU and CPU implementations. Provide speedup graphs to illustrate differences in performance for various matrix sizes and sparsity levels.</li>
-            <li><strong>Optimization for Load Balancing:</strong> Implement basic optimization strategies for workload distribution to mitigate issues with divergent execution and imbalance. Profile memory access to determine the effectiveness of parallelization, and adjust strategies to minimize latency.</li>
-            <li><strong>Poster Session Demonstration:</strong> Create an interactive demo that shows the execution of the sparse matrix multiplication on both GPU and CPU, along with visualizations of the speedup achieved. Prepare graphical outputs (e.g., speedup graphs, computation breakdown) to show efficiency gains and differences between platforms.</li>
+            <li>Functional Implementation on GPU and CPU: Develop a fully functional implementation of sparse matrix multiplication on both GPU (using CUDA) and multi-core CPU (using OpenMP). Ensure that the code can handle matrices of different sizes and sparsity patterns efficiently without errors or major bottlenecks.</li>
+            <li>Basic Performance Analysis: Perform a detailed analysis comparing the performance of GPU and CPU implementations. Provide speedup graphs to illustrate differences in performance for various matrix sizes and sparsity levels.</li>
+            <li>Optimization for Load Balancing: Implement basic optimization strategies for workload distribution to mitigate issues with divergent execution and imbalance. Profile memory access to determine the effectiveness of parallelization, and adjust strategies to minimize latency.</li>
+            <li>Poster Session Demonstration: Create an interactive demo that shows the execution of the sparse matrix multiplication on both GPU and CPU, along with visualizations of the speedup achieved. Prepare graphical outputs (e.g., speedup graphs, computation breakdown) to show efficiency gains and differences between platforms.</li>
         </ul>
         <p><strong>Hope to Achieve (Extra Goals for an Exceptional Outcome):</strong></p>
         <ul>
-            <li><strong>Advanced Optimization Techniques:</strong> Implement advanced techniques like tiling and efficient data structures to improve memory locality and reduce latency. Additionally, use prefetching to hide latency caused by irregular memory access patterns.</li>
-            <li><strong>Scalability Testing on PSC Supercomputer:</strong> Test the implementation on larger datasets using the PSC supercomputer to assess scalability. Analyze the impact of additional cores or nodes on overall performance and provide a detailed report.</li>
-            <li><strong>Energy Consumption Analysis:</strong> Measure the energy consumption of GPU vs. CPU implementations to determine the efficiency in terms of energy-to-computation ratio.</li>
+            <li>Advanced Optimization Techniques: Implement advanced techniques like tiling and efficient data structures to improve memory locality and reduce latency. Additionally, use prefetching to hide latency caused by irregular memory access patterns.</li>
+            <li>Scalability Testing on PSC Supercomputer: Test the implementation on larger datasets using the PSC supercomputer to assess scalability. Analyze the impact of additional cores or nodes on overall performance and provide a detailed report.</li>
+            <li>Energy Consumption Analysis: Measure the energy consumption of GPU vs. CPU implementations to determine the efficiency in terms of energy-to-computation ratio.</li>
         </ul>
         <p><strong>Fallback Goals (In Case Work Progresses More Slowly):</strong></p>
         <ul>
-            <li><strong>Functional CPU Implementation Only:</strong> If the GPU implementation faces major roadblocks, focus on achieving an efficient multi-core CPU implementation using OpenMP.</li>
-            <li><strong>Basic Performance Comparison:</strong> Instead of detailed optimizations, perform a more limited performance comparison focusing on baseline speedup without advanced strategies.</li>
+            <li>Functional CPU Implementation Only: If the GPU implementation faces major roadblocks, focus on achieving an efficient multi-core CPU implementation using OpenMP.</li>
+            <li>Basic Performance Comparison: Instead of detailed optimizations, perform a more limited performance comparison focusing on baseline speedup without advanced strategies.</li>
         </ul>
         <p><strong>Poster Session Deliverables:</strong></p>
         <ul>
@@ -84,10 +84,10 @@
 
     <section id="platform">
         <h2>Platform Choice</h2>
-        <p>We have chosen <strong>C++</strong> as our primary programming language for this project. C++ offers fine-grained control over hardware resources and memory, which is crucial for optimizing sparse matrix operations. Its support for parallel programming frameworks, like <strong>OpenMP</strong> for CPU multi-threading and <strong>CUDA</strong> for GPU programming, makes it a natural fit for our parallel implementations.</p>
+        <p>We have chosen C++ as our primary programming language for this project. C++ offers fine-grained control over hardware resources and memory, which is crucial for optimizing sparse matrix operations. Its support for parallel programming frameworks, like OpenMP for CPU multi-threading and CUDA for GPU programming, makes it a natural fit for our parallel implementations.</p>
         <p><strong>GPU (CUDA):</strong> NVIDIA GPUs are well-suited for highly parallel computations, and CUDA provides a straightforward way to leverage these GPUs for our workload. Sparse matrix multiplication can be efficiently parallelized across thousands of GPU cores, which significantly speeds up computation.</p>
-        <p><strong>Multi-Core CPU (OpenMP):</strong> Multi-core CPUs are versatile and capable of handling general-purpose workloads, including parallel sparse matrix operations. Using <strong>OpenMP</strong>, we can effectively distribute computations across CPU cores, taking advantage of their cache and memory hierarchy to improve performance.</p>
-        <p><strong>Platform Suitability for Workload:</strong> The workload involves many independent operations (processing non-zero elements across different rows and columns). This characteristic is ideal for both <strong>GPU</strong> and <strong>multi-core CPU</strong> platforms, which excel in parallelizing independent tasks. C++ allows us to implement efficient data structures, manage memory manually, and apply prefetching techniques to mitigate irregular memory access patterns, which are common in sparse matrix operations.</p>
+        <p><strong>Multi-Core CPU (OpenMP):</strong> Multi-core CPUs are versatile and capable of handling general-purpose workloads, including parallel sparse matrix operations. Using OpenMP, we can effectively distribute computations across CPU cores, taking advantage of their cache and memory hierarchy to improve performance.</p>
+        <p><strong>Platform Suitability for Workload:</strong> The workload involves many independent operations (processing non-zero elements across different rows and columns). This characteristic is ideal for both GPU and multi-core CPU platforms, which excel in parallelizing independent tasks. C++ allows us to implement efficient data structures, manage memory manually, and apply prefetching techniques to mitigate irregular memory access patterns, which are common in sparse matrix operations.</p>
     </section>
     </section>
 
@@ -105,7 +105,7 @@
             <li>Implement a basic version of sparse matrix multiplication on the GPU using CUDA.</li>
             <li>Complete a functional version of the CPU implementation with OpenMP.</li>
             <li>Begin integrating profiling tools to identify basic performance bottlenecks.</li>
-            <li>Start drafting the <strong>Intermediate Milestone Report</strong>.</li>
+            <li>Start drafting the Intermediate Milestone Report.</li>
         </ul>
         <p><strong>Week 3: November 26 - December 1</strong></p>
         <ul>
@@ -117,25 +117,19 @@
         <ul>
             <li>Implement optimizations for GPU and CPU versions:</li>
             <ul>
-                <li>Use <strong>prefetching</strong> to mitigate latency caused by irregular memory access.</li>
-                <li>Introduce <strong>tiling</strong> and other data structure optimizations to improve locality and reduce cache misses.</li>
+                <li>Use prefetching to mitigate latency caused by irregular memory access.</li>
+                <li>Introduce tiling and other data structure optimizations to improve locality and reduce cache misses.</li>
             </ul>
             <li>Test and evaluate different load-balancing strategies to ensure consistent performance across different sparsity patterns.</li>
         </ul>
         <p><strong>Week 5: December 9 - December 15</strong></p>
         <ul>
-            <li>Perform scalability tests on the <strong>PSC supercomputer</strong> to evaluate performance on larger datasets.</li>
-            <li>Carry out an <strong>energy consumption analysis</strong> of both CPU and GPU implementations to compare energy efficiency.</li>
-            <li>Create detailed <strong>speedup graphs</strong> and <strong>profiling visualizations</strong>.</li>
-            <li>Finalize the <strong>interactive demo</strong> and gather all deliverables for the poster session.</li>
+            <li>Perform scalability tests on the PSC supercomputer to evaluate performance on larger datasets.</li>
+            <li>Carry out an energy consumption analysis of both CPU and GPU implementations to compare energy efficiency.</li>
+            <li>Create detailed speedup graphs and profiling visualizations.</li>
+            <li>Finalize the interactive demo and gather all deliverables for the poster session.</li>
             <li><strong>December 15:</strong> Submit <strong>Final Project Report</strong>.</li>
         </ul>
     </section>
-
-    <footer>
-        <h2>Submitting Your Proposal Writeup</h2>
-        <p>Please post your writeup on your project web page. In addition, please submit your writeup to Gradescope (as a group submission). Note that you will also be posting updates and results to this web page, so your proposal should be a link on your web page, not the entire web page itself.</p>
-        <p>(Note: the Gradescope submission should be a PDF of the full proposal; not just a link to the proposal on your project web site.)</p>
-    </footer>
 </body>
 </html>
