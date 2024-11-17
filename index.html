@@ -29,6 +29,7 @@
     <section id="background">
         <h2>Background</h2>
         <p>Our project focuses on implementing an optimized sparse matrix multiplication algorithm that can run efficiently on parallel platforms, specifically GPU and multi-core CPU architectures. Sparse matrix multiplication involves multiplying two matrices that contain predominantly zero elements. Instead of performing operations on every element, we only process the non-zero entries, making it essential to use specialized data formats such as Compressed Sparse Row (CSR) or Compressed Sparse Column (CSC) to store the matrices.</p>
+	<p> Sparse matrix multiplication is especially relevant in applications such as text classification in machine learning, where natural language in text datasets are often represented as sparse matrix embeddings, such as TF-IDF or Bag-of-Words embeddings. As such, our project holds immediate applicability to the domain of applied machine learning, as the efficient implementation of sparse matrix multiplication holds value in accelerating the training process of text models, among other examples.</p>
         <p>The application will be implemented to effectively utilize parallel computing by splitting the multiplication task across multiple threads or cores. In GPU implementation, we intend to assign different rows or blocks of the matrix to different threads to take advantage of the massive parallelism offered by GPU architectures. On multi-core CPUs, we plan to use multi-threading to achieve similar division of tasks, distributing the workload across multiple cores for effective computation. Below is a high-level pseudocode representation of the approach:</p>
         <pre>
         for each non-zero element in Matrix A:
@@ -69,7 +70,7 @@
         <p><strong>Hope to Achieve (Extra Goals for an Exceptional Outcome):</strong></p>
         <ul>
             <li>Advanced Optimization Techniques: Implement advanced techniques like tiling and efficient data structures to improve memory locality and reduce latency. Additionally, use prefetching to hide latency caused by irregular memory access patterns.</li>
-            <li>Scalability Testing on PSC Supercomputer: Test the implementation on larger datasets using the PSC supercomputer to assess scalability. Analyze the impact of additional cores or nodes on overall performance and provide a detailed report.</li>
+            <li>Scalability Testing on PSC Supercomputer: Test the implementation on larger datasets using the PSC supercomputer to assess scalability. Download/develop natural language text datasets to use for stress testing our implementations, as well as comparing performance across real-world scenarios such as sparse-sparse multiplications vs sparse-dense multiplications. Analyze the impact of additional cores or nodes on overall performance and provide a detailed report.</li>
             <li>Energy Consumption Analysis: Measure the energy consumption of GPU vs. CPU implementations to determine the efficiency in terms of energy-to-computation ratio.</li>
         </ul>
         <p><strong>Fallback Goals (In Case Work Progresses More Slowly):</strong></p>
